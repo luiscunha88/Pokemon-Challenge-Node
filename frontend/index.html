@@ -10,6 +10,7 @@
 	<meta name="robots" content="index" />
 	<meta name="author" content="__developer_name__" />
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
@@ -35,21 +36,52 @@
 			</div>
 
 			<div class="order-numeric">
-				<div class="ascdesc"><p>Ascending</p></div>
-				<div class="numeric"><p>numeric fields</p></div>
+				<form method="get">
+
+				<div class="ascdesc">
+					<select>
+						<option value="Ascending">Ascending</option>
+						<option value="Descending">Desceding</option>
+					</select>
+				</div>
+				<div class="numeric">
+					<label for="type">from</label>
+					<input type="text" id="from" placeholder="001">
+					<label for="to">to</label>
+					<input type="text" id="to" placeholder="999">
+				</div>
+				</form>
+
 			</div>
 
 			<div class="filters">
 				<button id="pokemon-type" onclick="pokeType()">Type</button>
-				<div id="drop-type" class="drop-type">
-					<a href="#">fogo</a>
-					<a href="#">agua</a>
-				</div>
+					<div id="type" class="drop-type">
+						<a href="#">Fire</a>
+						<a href="#">Water</a>
+						<a href="#">Grass</a>
+						<a href="#">Electricity</a>
+						<a href="#">Psychic</a>
+						<a href="#">Rock</a>
+					</div>
 				<button id="weaknesses">Weaknesses</button>
 				<button id="ability">Ability</button>
 				<button id="height">Height</button>
 				<button id="weight">Weight</button>
 			</div>
+
+
+
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 
 			<div class="flex-container">
 				<div>1</div>
