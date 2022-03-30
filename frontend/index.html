@@ -17,36 +17,55 @@
 	<div class="content">
 		<div class="topbar">
 			<ul>
-				<li><a href="">Home</a></li>
-				<li><a href="">Pokedex</a></li>
-				<li><a href="">Videogames</a></li>
-				<li><a href="">GCC Pokemon</a></li>
-				<li><a href="">TV Pokemon</a></li>
-				<li><a href="">Play!Pokemon</a></li>
-				<li><a href="">News</a></li>
+				<li><a href=""><img src="images/icons/home2.png" alt=""/> Home</a></li>
+				<li><a href=""><img src="images/icons/pokedex.png" alt=""/>Pokedex</a></li>
+				<li><a href=""><img src="images/icons/game.png" alt=""/> Videogames</a></li>
+				<li><a href=""><img src="images/icons/card.png" alt=""/> GCC Pokemon</a></li>
+				<li><a href=""><img src="images/icons/tv.png" alt=""/> TV Pokemon</a></li>
+				<li><a href=""><img src="images/icons/trophy.png" alt=""/> Play!Pokemon</a></li>
+				<li><a href=""><img src="images/icons/news.png" alt=""/> News</a></li>
 			</ul>
 		</div>
+		<div class="left-content">
 		<div class="searchbar">
-			<form action="">
-				<input type="text" id="search" placeholder="Search your Pokèmon!">
-				<input type="submit" id="search-button" value="submit">
-			</form>
-		</div>
-		<div style="background-color: white; overflow: hidden;>
+				<form method="get">
+					<input type="text" id="search" placeholder="Search your Pokèmon!">
+					<input type="submit" id="search-button" value="submit">
+				</form>
+			</div>
 
-		</div>
-		<div><p>I'm a div in the wrong place x)</p></div>
-			<!-- Saltar a barra de filtros e fazer a flex box dos pokemon-->
+			<div class="order-numeric">
+				<div class="ascdesc"><p>Ascending</p></div>
+				<div class="numeric"><p>numeric fields</p></div>
+			</div>
 
-		<div class="flex-container">
-			<div>1</div>
-			<div>2</div>
-			<div>3</div>
+			<div class="filters">
+				<button id="pokemon-type" onclick="pokeType()">Type</button>
+				<div id="drop-type" class="drop-type">
+					<a href="#">fogo</a>
+					<a href="#">agua</a>
+				</div>
+				<button id="weaknesses">Weaknesses</button>
+				<button id="ability">Ability</button>
+				<button id="height">Height</button>
+				<button id="weight">Weight</button>
+			</div>
+
+			<div class="flex-container">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+			</div>
+		</div>
+
+		<div class="selected">
+			<img src="images/1.png" alt=""/>
+
 		</div>
 
 	</div>
 
-
+	<script src="js/script.js" type="text/javascript"></script>
 </body>
 
 </html>

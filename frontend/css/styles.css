@@ -4,30 +4,65 @@ body {
 }
 
 .content {
-    margin:2% 10% 2% 20%;
+    margin:2% 10% 2% 15%;
     height: 100%;
-}
-
-.topbar {
-    height: 7%;
-    background-color: #ffffff;
-    line-height: normal;
-    vertical-align: auto;
     overflow: hidden;
 }
 
-.searchbar #search{
-    height: 5%;
-    line-height: 5%;
-    vertical-align: auto;
-    width: 80%;
-    border-radius: 15px;
-    border: none;
-    margin-top: 2%
+.left-content {
+    float: left;
+    width: 70%;
 }
 
-#search-button {
+.selected {
+    float: right;
+    width: 27%;
+    margin-top: 3%;
 
+}
+
+.topbar {
+    background-color: #ffffff;
+    vertical-align: auto;
+    overflow: hidden;
+    height: 10%;
+    line-height: 10%;
+}
+
+.topbar img {
+    height: 50px;
+    width: 50px;
+}
+
+.topbar a {
+    text-decoration: none;
+    font-family: "Comic Sans MS";
+    font-size: 17px;
+    font-weight: bolder;
+    color: #947786;
+    vertical-align: center;
+}
+
+.searchbar {
+    margin-top: 3%;
+    background-color: #ffffff;
+    height: 7%;
+    border-radius: 12px;
+    line-height: 7%;
+}
+
+.searchbar #search {
+    border: none;
+    width: 90%;
+    vertical-align: center;
+    height: 100%;
+    border-radius: 12px;
+    outline: none;
+}
+
+.order-numeric {
+    margin-top: 3%;
+    overflow: hidden;
 }
 
 .ascdesc {
@@ -36,37 +71,55 @@ body {
 
 .numeric {
     float: right;
-    margin-right: 20%;
 }
 
 .flex-container {
     display: flex;
     flex-wrap: nowrap;
-    background-color: DodgerBlue;
+    background-color: white;
+    margin-top: 3%;
 }
 
 .flex-container > div {
     background-color: #f1f1f1;
-    width: 100px;
-    margin: 10px;
+    width: 30%;
+    margin: 2%;
     text-align: center;
     line-height: 75px;
     font-size: 30px;
 }
 
+.drop-type {
+    display: none;
+    position: absolute;
+}
+
+.show {
+    display: block;
+}
+
+.filters {
+    margin-top: 3%;
+}
+
+.poketype{
+    background-color: white;
+    width: 19%;
+}
+
+
+
 
 li {
     list-style-type: none;
     display: inline;
-    padding: 20px;
+    padding: 2%;
+
 }
 
-li a {
-    text-decoration: none;
-}
 
 div {
     border: 0px;
-    border-radius: 15px;
+    border-radius: 12px;
 }
 
