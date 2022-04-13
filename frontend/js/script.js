@@ -12,20 +12,6 @@ function dropdownWeakness() {
     weaknesses.classList.toggle('hidden')
 }
 
-closeButtons = function (id, element) {
-    window.onclick = function(e) {
-        if (!e.target.matches('id')) {
-            if (!element.classList.contains('hidden')) {
-                element.classList.add('hidden')
-            }
-        }
-    }
-}
-
-closeButtons(pokeType, type)
-
-
-
 
 
 // function pokeType() {
