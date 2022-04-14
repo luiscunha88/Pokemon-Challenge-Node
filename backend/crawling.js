@@ -1,11 +1,15 @@
 import axios from "axios"
-import fs from "fs";
+import fs from "fs"
 
 const url = `https://pokeapi.glitch.me/v1/pokemon/`
 const dataFolder = `./api-calls/pokeapi-glitch-v1/`
 const type = `.json`
 
+
+// i vai de 1 a 807(api v1 possui informação referente a 807 pokemons)
 for(let i=1 ; i< 808 ; i++) {
+    // vai ser verificado se existe um ficheiro naquela localização com aquele nome, caso dê erro, é feito o call à API
+    // e gravado o ficheiro que está em falta
     fs.access(dataFolder + i + type, function (error) {
         if (error) {
             console.log("DOES NOT exist:" + i );
