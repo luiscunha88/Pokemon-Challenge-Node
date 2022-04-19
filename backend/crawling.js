@@ -1,5 +1,5 @@
-import axios from "axios"
-import fs from "fs"
+const axios = require('axios')
+const fs = require('fs')
 
 const url = `https://pokeapi.glitch.me/v1/pokemon/`
 const dataFolder = `./api-calls/pokeapi-glitch-v1/`
@@ -12,7 +12,7 @@ for(let i=1 ; i< 808 ; i++) {
     // e gravado o ficheiro que está em falta
     fs.access(dataFolder + i + type, function (error) {
         if (error) {
-            console.log("DOES NOT exist:" + i );
+            console.log("DOES NOT exist:" + i )
             axios.get(url + i)
                 .then(response => {
                     fs.writeFile(dataFolder + i + type, JSON.stringify(response.data), function (err) {
