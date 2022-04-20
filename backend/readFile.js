@@ -9,12 +9,12 @@ const pool = new Pool({
     port: 5432,
 })
 
-const dataFolder = `./api-calls/pokeapi-v2/`
+const dataFolder = `./api-calls/types/`
 const type = `.json`
 
-for(let i=1 ; i<808 ; i++){
+// for(let i=1 ; i<19999 ; i++) {
 
-    fs.readFile(dataFolder + i + type, "utf-8",  (err, data) => {
+    fs.readFile(dataFolder + 1 + type, "utf-8", (err, data) => {
         if (err) {
             console.error(err)
             return
@@ -22,16 +22,24 @@ for(let i=1 ; i<808 ; i++){
 
         let poke = JSON.parse(data)
 
-        //console.log(poke[0])
+        let pidgey = poke.pokemon[0].pokemon.url
+        console.log(pidgey)
+
+        let substring = pidgey.substr(-3,2)
+        let inteiro = parseInt(substring)
+        console.log(inteiro)
+
+        //console.log(poke)
+        // pool.query(
+        //     `INSERT INTO pokemon_type(id_type)VALUES('${poke.id}')`,
+        //     (err, res) => {
+        //         console.log(err, res);
+        //     }
+        // )
 
 
-    pool.query(`UPDATE pokemon SET weight = '${poke.weight/10}', height = '${poke.height/10}', base_exp = '${poke.base_experience}', hp = '${poke.stats[0].base_stat}', atk = '${poke.stats[1].base_stat}', def = '${poke.stats[2].base_stat}', special_attack = '${poke.stats[3].base_stat}', special_defense = '${poke.stats[4].base_stat}', speed = '${poke.stats[5].base_stat}', total ='${poke.stats[0].base_stat + poke.stats[1].base_stat + poke.stats[2].base_stat + poke.stats[3].base_stat + poke.stats[4].base_stat + poke.stats[5].base_stat}' WHERE id = '${i}'`, (err, res) => {
-        console.log(err, res);
     })
-
-    })
-
-}
+// }
 
 
 // pool.query(
@@ -40,6 +48,14 @@ for(let i=1 ; i<808 ; i++){
 //         console.log(err, res);
 //     }
 // )
+
+
+
+// pool.query(`UPDATE pokemon SET weight = '${poke.weight/10}', height = '${poke.height/10}', base_exp = '${poke.base_experience}', hp = '${poke.stats[0].base_stat}', atk = '${poke.stats[1].base_stat}', def = '${poke.stats[2].base_stat}', special_attack = '${poke.stats[3].base_stat}', special_defense = '${poke.stats[4].base_stat}', speed = '${poke.stats[5].base_stat}', total ='${poke.stats[0].base_stat + poke.stats[1].base_stat + poke.stats[2].base_stat + poke.stats[3].base_stat + poke.stats[4].base_stat + poke.stats[5].base_stat}' WHERE id = 83`, (err, res) => {
+//     console.log(err, res);
+// })
+//
+// })
 
 
 

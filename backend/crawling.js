@@ -1,15 +1,11 @@
 const axios = require('axios')
 const fs = require('fs')
 
-const url = `https://pokeapi.glitch.me/v1/pokemon/`
-const dataFolder = `./api-calls/pokeapi-glitch-v1/`
+const url = `https://pokeapi.co/api/v2/ability/`
+const dataFolder = `./api-calls/abilities/`
 const type = `.json`
 
-
-// i vai de 1 a 807(api v1 possui informação referente a 807 pokemons)
-for(let i=1 ; i< 808 ; i++) {
-    // vai ser verificado se existe um ficheiro naquela localização com aquele nome, caso dê erro, é feito o call à API
-    // e gravado o ficheiro que está em falta
+for(let i=1 ; i< 268 ; i++) {
     fs.access(dataFolder + i + type, function (error) {
         if (error) {
             console.log("DOES NOT exist:" + i )
@@ -22,7 +18,7 @@ for(let i=1 ; i< 808 ; i++) {
                 .catch(err => {
                     console.log(err)
                 })
-            console.log(`Pokemon ${i} saved`)
+            console.log(`Type ${i} saved`)
         } else {
             console.log("exists:" + i);
         }
@@ -31,3 +27,5 @@ for(let i=1 ; i< 808 ; i++) {
 
 // https://stackoverflow.com/questions/61045897/write-a-file-based-on-axios-response
 // https://sebhastian.com/node-check-if-file-exists/
+
+// https://pokeapi.glitch.me/v1/pokemon/
